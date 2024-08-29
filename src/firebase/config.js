@@ -1,17 +1,17 @@
-import firebase from "firebase/app";
-import 'firebase/firestore'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDR1pIUXKvFoCjs_rjnKj1FVEaNJM559Ag",
-  authDomain: "telkom-cookbook.firebaseapp.com",
-  projectId: "telkom-cookbook",
-  storageBucket: "telkom-cookbook.appspot.com",
-  messagingSenderId: "1031167265299",
-  appId: "1:1031167265299:web:c5ff5691244d827df80de6"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
-const projectFirestore = firebase.firestore()
+const projectFirestore = firebase.firestore();
 
-export { projectFirestore }
+export { projectFirestore };
